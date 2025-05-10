@@ -1,0 +1,169 @@
+Sistema "Orçamento de Equipamentos de Rede" (Replit)
+1. Visão Geral
+Criar uma aplicação web de geração de orçamentos de equipamentos de rede. Sistema moderno, com navegação lateral, cadastro de produtos e clientes, criação de orçamentos personalizados e exportação em PDF com layout profissional.
+
+2. Funcionalidades Principais
+2.1. Layout
+Menu lateral fixo para navegar entre:
+
+Produtos
+
+Clientes
+
+Gerar Orçamento
+
+Design clean e moderno (ex: TailwindCSS).
+
+Páginas centralizadas no conteúdo.
+
+Tema responsivo (desktop e mobile).
+
+2.2. Página de Produtos
+Listagem dos produtos em formato de tabela:
+
+Foto (miniatura)
+
+Descrição
+
+Valor (formato R$ xx,xx)
+
+Botões "Editar" e "Excluir"
+
+Botão “Cadastrar Produto” no canto superior direito.
+
+Ao clicar:
+
+Pop-up/modal para:
+
+Upload de foto
+
+Campo de descrição (obrigatório)
+
+Campo de valor (obrigatório, máscara monetária R$)
+
+Operações:
+
+Excluir: remove produto da base.
+
+Editar: abre pop-up com dados preenchidos para alteração.
+
+2.3. Página de Clientes
+Listagem dos clientes:
+
+Nome
+
+Telefone
+
+E-mail
+
+Botões "Editar" e "Excluir"
+
+Botão “Cadastrar Cliente” no canto superior direito.
+
+Ao clicar:
+
+Pop-up/modal para:
+
+Nome (obrigatório)
+
+Telefone (opcional)
+
+E-mail (opcional)
+
+Operações:
+
+Excluir: remove cliente da base.
+
+Editar: abre pop-up para alterar informações.
+
+2.4. Página de Gerar Orçamento
+Seções:
+
+Selecionar Cliente (dropdown de clientes cadastrados)
+
+Selecionar Produtos (dropdown para adicionar múltiplos produtos)
+
+Após adicionar: aparecem campos para:
+
+Quantidade
+
+Valor unitário (editável)
+
+Mão de obra, Instalações e Configurações
+
+Campo numérico com máscara monetária (R$)
+
+Serviços Mensais
+
+Dropdown:
+
+Meio salário mínimo
+
+1 salário mínimo
+
+1,5 salário mínimo
+
+2 salários mínimos
+
+2,5 salários mínimos
+
+3 salários mínimos
+
+Botões no final:
+
+Salvar (grava orçamento)
+
+Salvar + Gerar PDF
+
+2.5. Geração de PDF
+Usar biblioteca gratuita como jsPDF + html2canvas.
+
+Layout do PDF:
+
+Tabela de Produtos:
+
+Foto
+
+Descrição
+
+Valor unitário
+
+Quantidade
+
+Valor total
+
+Resumo abaixo:
+
+Total dos produtos
+
+Valor de mão de obra
+
+Total geral
+
+Valor de suporte e manutenção mensal escolhido
+
+Rodapé:
+
+Observação sobre o contrato de suporte e manutenção.
+
+3. Requisitos Técnicos
+
+Item	Detalhe
+Frontend	HTML5, TailwindCSS, Javascript
+Backend (Simples)	LocalStorage ou Firebase (se quiser algo mais robusto)
+Geração de PDF	jsPDF, html2canvas
+Hospedagem	Replit (Projeto Público/Privado)
+Estrutura do Projeto	React ou Vite + React (opcional) para mais performance
+Validação de Formulários	Campos obrigatórios sinalizados
+4. Observações Finais
+O nome do sistema: Orçamento de Equipamentos de Rede.
+
+Todos os valores devem usar formatação brasileira (R$ e vírgula para decimal).
+
+Interface amigável com pop-ups para não carregar novas páginas.
+
+PDF com cabeçalho, tabela de produtos e valores destacados.
+
+Rodapé do orçamento pode ter:
+
+“Este orçamento tem validade de 30 dias.”
